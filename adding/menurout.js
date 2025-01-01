@@ -53,5 +53,5 @@ rout.delete('/:id',async(req,res)=>{
     }
 
 })
-coole.log("running file");
+console.log("running file");
 module.exports=rout;
