@@ -1,9 +1,11 @@
 const express = require('express');
-const app=express();
+const app = express();
 const rout = express.Router();
 const converter = require('body-parser');
 app.use(converter.json());
-const menumodel = require('./menuformate.js');
+
+const menumodel = require('./.vscode/menuformate.js'); // Corrected path
+
 rout.post('/s',async(req,res)=>{
     console.log("POST request received at /menu/s");
    try{ const menu = new menumodel(req.body);
