@@ -1,8 +1,6 @@
 const express = require('express');
 const app = new express();
 app.use(express.json());
-//database connection
-// const url = 'mongodb://127.0.0.1:27017/database';
 require('dotenv').config();
 const url = process.env.url;
 const mongoose = require('mongoose');
