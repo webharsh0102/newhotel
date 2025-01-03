@@ -1,9 +1,10 @@
 const express = require('express');
 const app = new express();
 app.use(express.json());
-require('dotenv').config();
+require('dotenv').config({ path: 'adding/.env' });  
 const url = process.env.url;
 const mongoose = require('mongoose');
+console.log(url);
 mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
